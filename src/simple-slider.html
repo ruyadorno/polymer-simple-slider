@@ -1,7 +1,9 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<script src="../bower_components/SimpleSlider/dist/simpleslider.min.js"></script>
+
 <polymer-element name="simple-slider" constructor="SimpleSliderElement" attributes="transition-property transition-duration transition-delay start-value visible-value end-value auto-play">
-<template>
-<content id="slider"></content>
-</template>
+
   <script>
 
     var options = {};
@@ -22,6 +24,7 @@
     };
 
     Polymer('simple-slider', options);
+
   </script>
 
 </polymer-element>

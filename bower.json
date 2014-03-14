@@ -11,7 +11,7 @@
     "simple",
     "gallery",
     "carousel",
-    "polymer"
+    "polymer",
     "images"
   ],
   "license": "MIT",
@@ -23,9 +23,9 @@
     "tests"
   ],
   "dependencies": {
-    "polymer": "~0.2.1"
-  }
-  "devDependencies": {
-    "SimpleSlider": ">=0.1.0"
-  }
+    "platform": "Polymer/platform#~0.2.0",
+    "polymer": "Polymer/polymer#~0.2.0",
+    "SimpleSlider": ">=0.2.2"
+  },
+  "devDependencies": {}
 }
