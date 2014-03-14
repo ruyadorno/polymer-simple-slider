@@ -2,7 +2,7 @@
 
 A Polymer element providing a simple slider functionality.
 
-version: 0.1.0
+version: 0.1.1
 
 > Maintained by [Ruy Adorno](https://github.com/ruyadorno).
 
