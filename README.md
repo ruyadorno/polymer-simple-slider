@@ -35,11 +35,15 @@ version: 0.1.0
 
 ## Options
 
-Attribute  | Options                   | Default             | Description
----        | ---                       | ---                 | ---
-`foo`      | *string*                  | `bar`               | Lorem ipsum
-`bar`      | `abc`, `def`, `ghi`       | `foo`               | Lorem ipsum
-`height`   | *int*                     | `100`               | Lorem ipsum
+Attribute              | Options                   | Default             | Description
+---                    | ---                       | ---                 | ---
+`auto-play`            | `true`, `false`           | `true`              | Value determining if the slide transition should happen automatically
+`transitionProperty`   | `left`, `right`, `opacity`| `left`              | Determines the css property to be animated
+`transitionDuration`   | *Number*                  | `0.5`               | Value setting the duration of animation transition
+`transitionDelay`      | *Number*                  | `3`                 | Value determining the wait between each animation when you use **autoPlay:true**
+`startValue`           | *Number*                  | `-elem.width`       | Initial value of slide elements when starting a transition animation
+`visibleValue`         | *Number*                  | `0`                 | The value a slide element should have when it is displayed
+`endValue`             | *Number*                  | `elem.width`        | The value a slide will move to during a transition animation
 
 
 ## Contributing
