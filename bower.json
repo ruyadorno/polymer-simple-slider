@@ -25,7 +25,7 @@
   "dependencies": {
     "platform": "Polymer/platform#~0.2.0",
     "polymer": "Polymer/polymer#~0.2.0",
-    "SimpleSlider": ">=0.2.2"
+    "SimpleSlider": ">=0.3.0"
   },
   "devDependencies": {}
 }
