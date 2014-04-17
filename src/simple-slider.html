@@ -23,6 +23,20 @@
 
     };
 
+    // Dispose slider on element detach
+    options.detached = function () {
+        element.dispose();
+    };
+
+    // Define slider methods on polymer element
+    options.actualIndex = function() { return element.actualIndex; };
+    options.change = function(index) { element.change(index); };
+    options.next = function() { element.next(); };
+    options.prev = function() { element.prev(); };
+    options.prevIndex = function() { return element.prevIndex(); };
+    options.nextIndex = function() { return element.nextIndex(); };
+    options.dispose = function() { element.dispose(); };
+
     Polymer('simple-slider', options);
 
   </script>
