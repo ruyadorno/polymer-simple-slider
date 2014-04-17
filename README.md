@@ -1,6 +1,6 @@
 # &lt;simple-slider&gt;
 
-A Polymer element providing a simple slider functionality.
+A Polymer element providing a [simple slider](http://ruyadorno.github.io/SimpleSlider) functionality.
 
 version: 0.1.1
 
@@ -29,7 +29,11 @@ version: 0.1.1
 3. Start using it!
 
     ```html
-    <simple-slider></simple-slider>
+    <simple-slider style="width:500px; height:500px">
+        <img src="foo/bar1.png"/>
+        <img src="foo/bar2.png"/>
+        <img src="foo/bar3.png"/>
+    </simple-slider>
     ```
 
 
