@@ -7,6 +7,10 @@
     "grunt": "~0.4.1",
     "grunt-bump": "~0.0.x"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ruyadorno/polymer-simple-slider"
+  },
   "engines": {
     "node": ">=0.8.0"
   }
