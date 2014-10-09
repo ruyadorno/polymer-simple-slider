@@ -1,0 +1,9 @@
+{
+  "name": "polymer-simple-slider-example",
+  "version": "0.0.0",
+  "description": "Example of how to consume the polymer-simple-slider element",
+  "license": "MIT",
+  "dependencies": {
+    "polymer-simple-slider": "latest"
+  }
+}
