@@ -18,7 +18,8 @@
           startValue: this['start-value'],
           visibleValue: this['visible-value'],
           endValue: this['end-value'],
-          autoPlay: this['auto-play']
+          autoPlay: this['auto-play'],
+          onChange: function (prevIndex, nextIndex) { this.fire('change', { prevIndex: prevIndex, nextIndex: nextIndex }); }.bind(this)
         });
 
     };
