@@ -1,6 +1,6 @@
 {
   "name": "polymer-simple-slider",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "A Polymer element providing a simple slider functionality",
   "dependencies": {},
   "devDependencies": {
