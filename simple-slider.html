@@ -1,0 +1,63 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<script src="../SimpleSlider/dist/simpleslider.min.js"></script>
+
+<dom-element is="simple-slider">
+
+  <script>
+
+  Polymer({
+    is: 'simple-slider',
+    properties: {
+      transitionProperty: { type: String },
+      transitionDuration: { type: Number },
+      transitionDelay: { type: Number },
+      transitionStartDelay: { type: Number },
+      startValue: { type: String },
+      visibleValue: { type: String },
+      endValue: { type: String },
+      autoPlay: { type: Boolean },
+    },
+    attached: function () {
+      var slider = new window.SimpleSlider(this, {
+        transitionProperty: this.transitionProperty,
+        transitionDuration: this.transitionDuration,
+        transitionDelay: this.transitionDelay,
+        startValue: this.startValue,
+        visibleValue: this.visibleValue,
+        endValue: this.endValue,
+        autoPlay: this.autoPlay,
+        onChange: function (prevIndex, nextIndex) {
+          this.fire('change', {
+            prevIndex: prevIndex,
+            nextIndex: nextIndex
+          });
+        }.bind(this)
+      });
+      slider.pauseAutoPlay();
+      this.__resumeAutoPlay = setTimeout(function() {
+        requestAnimationFrame(function() {
+          slider.resumeAutoPlay();
+          console.log("resuming");
+        });
+      }, this.transitionStartDelay || 0);
+      this.slider = slider;
+    },
+
+    // Dispose slider on element detach
+    detached: function () {
+      element.dispose();
+      clearTimeout(this.__resumeAutoPlay);
+    },
+
+    // Define slider methods on polymer element
+    actualIndex: function() { return element.actualIndex; },
+    change: function(index) { element.change(index); },
+    next: function() { element.next(); },
+    prev: function() { element.prev(); },
+    prevIndex: function() { return element.prevIndex(); },
+    nextIndex: function() { return element.nextIndex(); },
+    dispose: function() { element.dispose(); },
+  });
+  </script>
+</dom-element>
