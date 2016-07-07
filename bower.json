@@ -23,7 +23,6 @@
     "tests"
   ],
   "dependencies": {
-    "platform": "Polymer/platform#~0.2.0",
     "polymer": "^1.5.0",
     "SimpleSlider": ">=0.5.0"
   },
