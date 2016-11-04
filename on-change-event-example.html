@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>&lt;simple-slider&gt;</title>
+
+    <!-- Importing Web Component's Polyfill -->
+    <script src="node_modules/webcomponents.js/webcomponents.min.js"></script>
+
+    <!-- Importing Custom Elements -->
+    <link rel="import" href="node_modules/polymer-simple-slider/simple-slider.html">
+
+    <style>
+        #nav-example { position: relative; width: 612px; height: 612px; }
+        #nav-slider { position: absolute; top: 0px; left: 0px; z-index: 1;}
+        a.slide-button { position: absolute; padding: 130px 0px 0px 15px; top: 0px; left: 0px; z-index: 12; width: 30px; height: 612px; color: #FFF; background-color: rgba(0,0,0,0.4); text-decoration: none; font-weight: 600; box-sizing: border-box; }
+        #next-button { left: 582px; }
+    </style>
+</head>
+<body>
+
+    <div id="nav-example" style="float: left">
+
+        <simple-slider id="nav-slider" style="width:612px; height:612px" auto-play="false">
+            <img src="http://placekitten.com/g/612/612"/>
+            <img src="https://unsplash.it/612/612/?random=0"/>
+            <img src="https://unsplash.it/612/612/?random=1"/>
+            <img src="https://unsplash.it/612/612/?random=2"/>
+        </simple-slider>
+
+        <div id="actual-slide-count" style="font-size: 72px; background: #FFF; position: absolute; top: 10px; left: 10px; z-index: 10;">0</div>
+
+        <script>
+            document.getElementById('nav-slider').addEventListener('change', function (e) {
+                document.getElementById('actual-slide-count').textContent = e.detail.nextIndex;
+            });
+        </script>
+
+    </div>
+
+    <div style="width: 500px; overflow: scroll; float: left; margin-left: 40px">
+        <h1>polymer-simple-slider</h1>
+        <p>Simple examples of how to use the web component provided on<br/><a href="https://github.com/ruyadorno/polymer-simple-slider">https://github.com/ruyadorno/polymer-simple-slider</a></p>
+        <hr style="height: 1px; margin:40px 0px; border: 0; background: #CCC"/>
+        <h2>Change event example</h2>
+        <pre><code>
+&lt;simple-slider id=&quot;nav-slider&quot; style=&quot;width:612px; height:612px&quot; auto-play=&quot;false&quot;&gt;
+    &lt;img src=&quot;http://placekitten.com/g/612/612&quot;/&gt;
+    &lt;img src=&quot;https://unsplash.it/612/612/?random=0&quot;/&gt;
+    &lt;img src=&quot;https://unsplash.it/612/612/?random=1&quot;/&gt;
+    &lt;img src=&quot;https://unsplash.it/612/612/?random=2&quot;/&gt;
+&lt;/simple-slider&gt;
+
+&lt;div id=&quot;actual-slide-count&quot; style=&quot;font-size: 72px; background: #FFF; position: absolute; top: 10px; left: 10px; z-index: 10;&quot;&gt;0&lt;/div&gt;
+
+&lt;script&gt;
+    document.getElementById('nav-slider').addEventListener('change', function (e) {
+        document.getElementById('actual-slide-count').textContent = e.detail.nextIndex;
+    });
+&lt;/script&gt;
+        </code></pre>
+        <hr style="height: 1px; margin:40px 0px; border: 0; background: #CCC"/>
+
+        <h2>More examples</h2>
+        <ul>
+            <li><a href="./next-prev-buttons-example.html">Next/Prev buttons example</a></li>
+            <li><a href="./index.html">Simple Usage</a></li>
+        </ul>
+    </div>
+
+</body>
+</html>
+

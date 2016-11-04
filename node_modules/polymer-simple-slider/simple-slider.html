@@ -1,0 +1,65 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<script src="../simple-slider/dist/simpleslider.min.js"></script>
+
+<dom-element is="simple-slider">
+
+  <script>
+
+  Polymer({
+    is: 'simple-slider',
+    properties: {
+      transitionProperty: { type: String },
+      transitionDuration: { type: Number },
+      transitionDelay: { type: Number },
+      transitionStartDelay: { type: Number },
+      startValue: { type: String },
+      visibleValue: { type: String },
+      endValue: { type: String },
+      noAutoPlay: { type: Boolean }
+    },
+    attached: function () {
+      var slider = new window.SimpleSlider(this, {
+        transitionProperty: this.transitionProperty,
+        transitionDuration: this.transitionDuration,
+        transitionDelay: this.transitionDelay,
+        startValue: this.startValue,
+        visibleValue: this.visibleValue,
+        endValue: this.endValue,
+        autoPlay: !this.noAutoPlay,
+        onChange: function (prevIndex, nextIndex) {
+          this.fire('change', {
+            prevIndex: prevIndex,
+            nextIndex: nextIndex
+          });
+        }.bind(this),
+        onChangeEnd: function (prevIndex, nextIndex) {
+          this.fire('change-end', {
+            prevIndex: prevIndex,
+            nextIndex: nextIndex
+          });
+        }.bind(this)
+      });
+      slider.pauseAutoPlay();
+      this.__resumeAutoPlay = setTimeout(function() {
+        !this.noAutoPlay && slider.resumeAutoPlay();
+      }.bind(this), this.transitionStartDelay || 0);
+      this.slider = slider;
+    },
+
+    // Dispose slider on element detach
+    detached: function () {
+      this.slider.dispose();
+    },
+
+    // Define slider methods on polymer element
+    actualIndex: function() { return this.slider.actualIndex; },
+    change: function(index) { this.slider.change(index); },
+    next: function() { this.slider.next(); },
+    prev: function() { this.slider.prev(); },
+    prevIndex: function() { return this.slider.prevIndex(); },
+    nextIndex: function() { return this.slider.nextIndex(); },
+    dispose: function() { this.slider.dispose(); },
+  });
+  </script>
+</dom-element>
