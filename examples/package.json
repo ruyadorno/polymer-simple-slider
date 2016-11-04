@@ -1,0 +1,17 @@
+{
+  "name": "polymer-simple-slider-example",
+  "version": "1.0.0",
+  "description": "This example is intended to show users how to consume the polymer-simple-slider element.",
+  "scripts": {
+    "postinstall": "mv ./node_modules/@polymer/polymer ./node_modules/polymer",
+    "start": "http-server"
+  },
+  "dependencies": {
+    "@polymer/polymer": "^1.2.5-npm-test.2",
+    "polymer-simple-slider": "^1.0.0",
+    "webcomponents.js": "^0.7.23"
+  },
+  "devDependencies": {
+    "http-server": "^0.9.0"
+  }
+}

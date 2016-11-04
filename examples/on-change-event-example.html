@@ -5,10 +5,10 @@
     <title>&lt;simple-slider&gt;</title>
 
     <!-- Importing Web Component's Polyfill -->
-    <script src="bower_components/platform/platform.js"></script>
+    <script src="node_modules/webcomponents.js/webcomponents.js"></script>
 
     <!-- Importing Custom Elements -->
-    <link rel="import" href="bower_components/polymer-simple-slider/src/simple-slider.html">
+    <link rel="import" href="node_modules/polymer-simple-slider/simple-slider.html">
 
     <style>
         #nav-example { position: relative; width: 612px; height: 612px; }
@@ -19,13 +19,13 @@
 </head>
 <body>
 
-    <div id="nav-example">
+    <div id="nav-example" style="float: left">
 
         <simple-slider id="nav-slider" style="width:612px; height:612px" auto-play="false">
             <img src="http://placekitten.com/g/612/612"/>
-            <img src="http://distilleryimage5.s3.amazonaws.com/de66967ac72111e2a23222000aaa0537_7.jpg"/>
-            <img src="http://distilleryimage8.s3.amazonaws.com/a042749ac72111e28c3c22000a1fb85a_7.jpg"/>
-            <img src="http://distilleryimage4.s3.amazonaws.com/8d32600ec72111e29f1422000a1fbc0e_7.jpg"/>
+            <img src="https://unsplash.it/612/612/?random=0"/>
+            <img src="https://unsplash.it/612/612/?random=1"/>
+            <img src="https://unsplash.it/612/612/?random=2"/>
         </simple-slider>
 
         <div id="actual-slide-count" style="font-size: 72px; background: #FFF; position: absolute; top: 10px; left: 10px; z-index: 10;">0</div>
@@ -36,6 +36,36 @@
             });
         </script>
 
+    </div>
+
+    <div style="width: 500px; overflow: scroll; float: left; margin-left: 40px">
+        <h1>polymer-simple-slider</h1>
+        <p>Simple examples of how to use the web component provided on<br/><a href="https://github.com/ruyadorno/polymer-simple-slider">https://github.com/ruyadorno/polymer-simple-slider</a></p>
+        <hr style="height: 1px; margin:40px 0px; border: 0; background: #CCC"/>
+        <h2>Change event example</h2>
+        <pre><code>
+&lt;simple-slider id=&quot;nav-slider&quot; style=&quot;width:612px; height:612px&quot; auto-play=&quot;false&quot;&gt;
+    &lt;img src=&quot;http://placekitten.com/g/612/612&quot;/&gt;
+    &lt;img src=&quot;https://unsplash.it/612/612/?random=0&quot;/&gt;
+    &lt;img src=&quot;https://unsplash.it/612/612/?random=1&quot;/&gt;
+    &lt;img src=&quot;https://unsplash.it/612/612/?random=2&quot;/&gt;
+&lt;/simple-slider&gt;
+
+&lt;div id=&quot;actual-slide-count&quot; style=&quot;font-size: 72px; background: #FFF; position: absolute; top: 10px; left: 10px; z-index: 10;&quot;&gt;0&lt;/div&gt;
+
+&lt;script&gt;
+    document.getElementById('nav-slider').addEventListener('change', function (e) {
+        document.getElementById('actual-slide-count').textContent = e.detail.nextIndex;
+    });
+&lt;/script&gt;
+        </code></pre>
+        <hr style="height: 1px; margin:40px 0px; border: 0; background: #CCC"/>
+
+        <h2>More examples</h2>
+        <ul>
+            <li><a href="./next-prev-buttons-example.html">Next/Prev buttons example</a></li>
+            <li><a href="./index.html">Simple Usage</a></li>
+        </ul>
     </div>
 
 </body>

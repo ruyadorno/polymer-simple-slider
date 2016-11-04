@@ -2,31 +2,37 @@
 
 A Polymer element providing a [simple slider](http://ruyadorno.github.io/SimpleSlider) functionality.
 
-version: 0.2.0
+version: 1.0.0
 
 > Maintained by [Ruy Adorno](https://github.com/ruyadorno).
 
 
 ## Demo
 
-> [Check it live](http://ruyadorno.github.io/SimpleSlider).
+> [Check it live](http://ruyadorno.github.io/polymer-simple-slider).
 
 
 ## Usage
 
-1. Import Web Components' polyfill:
+1. Install using Bower (also available on npm)
 
-    ```html
-    <script src="bower_components/platform/platform.js"></script>
+    ```sh
+    bower install --save polymer-simple-slider
     ```
 
-2. Import Custom Element:
+2. Import Web Components' polyfill:
 
     ```html
-    <link rel="import" href="src/simple-slider.html">
+    <script src="bower_components/webcomponents.js/webcomponents.js"></script>
     ```
 
-3. Start using it!
+3. Import Custom Element:
+
+    ```html
+    <link rel="import" href="bower_components/polymer-simple-slider/simple-slider.html">
+    ```
+
+4. Start using it!
 
     ```html
     <simple-slider style="width:500px; height:500px">
@@ -41,7 +47,7 @@ version: 0.2.0
 
 Attribute              | Options                   | Default             | Description
 ---                    | ---                       | ---                 | ---
-`auto-play`            | `true`, `false`           | `true`              | Value determining if the slide transition should happen automatically
+`no-auto-play`         | Boolean                   | `false`             | If this attr is present, do not auto play slides
 `transitionProperty`   | `left`, `right`, `opacity`| `left`              | Determines the css property to be animated
 `transitionDuration`   | *Number*                  | `0.5`               | Value setting the duration of animation transition
 `transitionDelay`      | *Number*                  | `3`                 | Value determining the wait between each animation when you use **autoPlay:true**

@@ -1,12 +1,17 @@
 {
   "name": "polymer-simple-slider",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "description": "A Polymer element providing a simple slider functionality",
-  "dependencies": {},
+  "dependencies": {
+    "simple-slider": "~0.6.0"
+  },
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-bump": "~0.0.x"
   },
+  "files": [
+    "simple-slider.html"
+  ],
   "keywords": [
     "web-components",
     "element",
@@ -19,7 +24,9 @@
     "type": "git",
     "url": "https://github.com/ruyadorno/polymer-simple-slider"
   },
-  "engines": {
-    "node": ">=0.8.0"
-  }
+  "author": {
+    "name": "Ruy Adorno",
+    "url": "ruyadorno.com"
+  },
+  "license": "MIT"
 }
