@@ -65,7 +65,7 @@ A Polymer element providing a [simple slider](http://ruyadorno.github.io/SimpleS
 
 ## Options
 
-version: 1.0.0
+version: 1.0.1
 
 Attribute              | Options                   | Default             | Description
 ---                    | ---                       | ---                 | ---
