@@ -1,15 +1,35 @@
 # &lt;simple-slider&gt;
 
-A Polymer element providing a [simple slider](http://ruyadorno.github.io/SimpleSlider) functionality.
-
 [![NPM version](https://badge.fury.io/js/polymer-simple-slider.svg)](https://npmjs.org/package/polymer-simple-slider) [![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://beta.webcomponents.org/element/ruyadorno/polymer-simple-slider)
+
+A Polymer element providing a [simple slider](http://ruyadorno.github.io/SimpleSlider) functionality.
 
 > Maintained by [Ruy Adorno](https://github.com/ruyadorno).
 
 
 ## Demo
 
-> [Check it live](http://ruyadorno.github.io/polymer-simple-slider).
+<!---
+```
+<custom-element-demo>
+  <template>
+    <script src="../webcomponentsjs/webcomponents-lite.js"></script>
+    <link rel="import" href="simple-slider.html">
+    <next-code-block></next-code-block>
+  </template>
+</custom-element-demo>
+```
+-->
+```html
+<simple-slider style="width:400px; height:400px">
+    <img src="http://placekitten.com/g/400/400"/>
+    <img src="https://unsplash.it/400/400/?random=0"/>
+    <img src="https://unsplash.it/400/400/?random=1"/>
+    <img src="https://unsplash.it/400/400/?random=2"/>
+</simple-slider>
+```
+
+ > [Check more examples](http://ruyadorno.github.io/polymer-simple-slider).
 
 
 ## Usage
