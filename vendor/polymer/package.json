@@ -1,0 +1,107 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "@polymer/polymer@^1.2.5-npm-test.2",
+        "scope": "@polymer",
+        "escapedName": "@polymer%2fpolymer",
+        "name": "@polymer/polymer",
+        "rawSpec": "^1.2.5-npm-test.2",
+        "spec": ">=1.2.5-npm-test.2 <2.0.0",
+        "type": "range"
+      },
+      "/Users/ruy.adorno/Documents/workspace/polymer-simple-slider-site"
+    ]
+  ],
+  "_from": "@polymer/polymer@>=1.2.5-npm-test.2 <2.0.0",
+  "_id": "@polymer/polymer@1.2.5-npm-test.2",
+  "_inCache": true,
+  "_location": "/@polymer/polymer",
+  "_nodeVersion": "5.0.0",
+  "_npmOperationalInternal": {
+    "host": "packages-8-eu.internal.npmjs.com",
+    "tmp": "tmp/polymer-1.2.5-npm-test.2.tgz_1454381430587_0.5532132943626493"
+  },
+  "_npmUser": {
+    "name": "polymer",
+    "email": "admin@polymer-project.org"
+  },
+  "_npmVersion": "3.3.6",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "@polymer/polymer@^1.2.5-npm-test.2",
+    "scope": "@polymer",
+    "escapedName": "@polymer%2fpolymer",
+    "name": "@polymer/polymer",
+    "rawSpec": "^1.2.5-npm-test.2",
+    "spec": ">=1.2.5-npm-test.2 <2.0.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/@polymer/polymer/-/polymer-1.2.5-npm-test.2.tgz",
+  "_shasum": "7930f5663c2f686915451d211e663aa9997d7336",
+  "_shrinkwrap": null,
+  "_spec": "@polymer/polymer@^1.2.5-npm-test.2",
+  "_where": "/Users/ruy.adorno/Documents/workspace/polymer-simple-slider-site",
+  "author": {
+    "name": "The Polymer Project Authors"
+  },
+  "bugs": {
+    "url": "https://github.com/Polymer/polymer/issues"
+  },
+  "contributors": [
+    {
+      "name": "The Polymer Authors",
+      "url": "http://polymer.github.io/AUTHORS.txt"
+    }
+  ],
+  "dependencies": {
+    "webcomponents.js": "^0.7.20"
+  },
+  "description": "The Polymer library makes it easy to create your own web components. Give your element some markup and properties, and then use it on a site. Polymer provides features like dynamic templates and data binding to reduce the amount of boilerplate you need to",
+  "devDependencies": {
+    "del": "^1.1.1",
+    "gulp": "^3.8.11",
+    "gulp-audit": "^1.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.3",
+    "gulp-vulcanize": "^6.0.1",
+    "lazypipe": "^0.2.3",
+    "polyclean": "^1.2.0",
+    "run-sequence": "^1.1.0",
+    "web-component-tester": "*"
+  },
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "dist": {
+    "shasum": "7930f5663c2f686915451d211e663aa9997d7336",
+    "tarball": "https://registry.npmjs.org/@polymer/polymer/-/polymer-1.2.5-npm-test.2.tgz"
+  },
+  "gitHead": "c2b8f438b05930167aad12e25a0dea300830e769",
+  "homepage": "https://github.com/Polymer/polymer",
+  "license": "BSD-3-Clause",
+  "main": "polymer.html",
+  "maintainers": [
+    {
+      "name": "polymer",
+      "email": "admin@polymer-project.org"
+    }
+  ],
+  "name": "@polymer/polymer",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Polymer/polymer.git"
+  },
+  "scripts": {
+    "build": "gulp",
+    "test": "wct",
+    "test-build": "gulp switch && wct && gulp restore"
+  },
+  "version": "1.2.5-npm-test.2"
+}
