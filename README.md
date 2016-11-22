@@ -2,7 +2,7 @@
 
 A Polymer element providing a [simple slider](http://ruyadorno.github.io/SimpleSlider) functionality.
 
-version: 1.0.0
+[![NPM version](https://badge.fury.io/js/polymer-simple-slider.svg)](https://npmjs.org/package/polymer-simple-slider) [![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://beta.webcomponents.org/element/ruyadorno/polymer-simple-slider)
 
 > Maintained by [Ruy Adorno](https://github.com/ruyadorno).
 
@@ -44,6 +44,8 @@ version: 1.0.0
 
 
 ## Options
+
+version: 1.0.0
 
 Attribute              | Options                   | Default             | Description
 ---                    | ---                       | ---                 | ---
