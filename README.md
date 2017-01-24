@@ -71,11 +71,12 @@ Attribute              | Options                   | Default             | Descr
 ---                    | ---                       | ---                 | ---
 `no-auto-play`         | Boolean                   | `false`             | If this attr is present, do not auto play slides
 `transitionProperty`   | `left`, `right`, `opacity`| `left`              | Determines the css property to be animated
-`transitionDuration`   | *Number*                  | `0.5`               | Value setting the duration of animation transition
-`transitionDelay`      | *Number*                  | `3`                 | Value determining the wait between each animation when you use **autoPlay:true**
-`startValue`           | *Number*                  | `-elem.width`       | Initial value of slide elements when starting a transition animation
-`visibleValue`         | *Number*                  | `0`                 | The value a slide element should have when it is displayed
-`endValue`             | *Number*                  | `elem.width`        | The value a slide will move to during a transition animation
+`transitionDuration`   | Number                    | `0.5`               | Value setting the duration of animation transition
+`transitionDelay`      | Number                    | `3`                 | Value determining the wait between each animation when you use **autoPlay:true**
+`startValue`           | Number                    | `-elem.width`       | Initial value of slide elements when starting a transition animation
+`visibleValue`         | Number                    | `0`                 | The value a slide element should have when it is displayed
+`endValue`             | Number                    | `elem.width`        | The value a slide will move to during a transition animation
+`auto-reload`          | Boolean                   | `false`             | If this attr is present the slider is reset whenever one of its child elements change
 
 
 ## Contributing
