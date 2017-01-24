@@ -16,7 +16,8 @@
       startValue: { type: String },
       visibleValue: { type: String },
       endValue: { type: String },
-      noAutoPlay: { type: Boolean }
+      noAutoPlay: { type: Boolean },
+      autoReload: { type: Boolean }
     },
     attached: function () {
       var slider = new window.SimpleSlider(this, {
@@ -45,6 +46,12 @@
         !this.noAutoPlay && slider.resumeAutoPlay();
       }.bind(this), this.transitionStartDelay || 0);
       this.slider = slider;
+
+      // Reload slider if children nodes are added / removed
+      var me = this;
+      Polymer.dom(this).observeNodes(function(info) {
+        if (me.autoReload) slider.init();
+      });
     },
 
     // Dispose slider on element detach
