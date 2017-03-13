@@ -43,7 +43,7 @@ A Polymer element providing a [simple slider](http://ruyadorno.github.io/SimpleS
 2. Import Web Components' polyfill:
 
     ```html
-    <script src="bower_components/webcomponents.js/webcomponents.js"></script>
+    <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
     ```
 
 3. Import Custom Element:
